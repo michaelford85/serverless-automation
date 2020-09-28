@@ -1,0 +1,11 @@
+---
+- name: Print debug message
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+
+
+    - name: Print debug message
+      debug:
+        msg: "This message is the result of a serverless function call."
