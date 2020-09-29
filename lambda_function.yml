@@ -4,9 +4,10 @@
 - name: Get Current Time from Lambda
   hosts: localhost
   gather_facts: no
+  vars_files:
+    - ./vars/lambda_vars.yml
 
   tasks:
-
 
     - name: Get Current Time from Lambda
       ansible.builtin.uri:
@@ -14,5 +15,5 @@
       register: time_output
 
     - name: Print out the current time
-      debug:
+      ansible.builtin.debug:
         var: time_output
