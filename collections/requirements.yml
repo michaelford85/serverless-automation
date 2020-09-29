@@ -3,4 +3,7 @@ collections:
 # With just the collection name
 - name: paloaltonetworks.panos
   version: 2.0.0
-  source: https://galaxy.ansible.com
+  source: https://galaxy.ansible.com/
+
+- name: cisco.nxos
+  source: https://cloud.redhat.com/api/automation-hub/
