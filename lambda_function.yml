@@ -1,0 +1,18 @@
+#https://www.serverless.com/examples/aws-node-simple-http-endpoint
+#Install Serverless: https://www.npmjs.com/package/serverless
+---
+- name: Get Current Time from Lambda
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+
+
+    - name: Get Current Time from Lambda
+      ansible.builtin.uri:
+        url: "https://{{ url-prefix }}.execute-api.us-east-1.amazonaws.com/dev/ping"
+      register: time_output
+
+    - name: Print out the current time
+      debug:
+        var: time_output
