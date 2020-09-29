@@ -8,7 +8,7 @@
     - ./vars/lambda_vars.yml
 
   tasks:
-
+ 
     - name: Get Current Time from Lambda
       ansible.builtin.uri:
         url: "https://{{ url_prefix }}.execute-api.us-east-1.amazonaws.com/dev/ping"
