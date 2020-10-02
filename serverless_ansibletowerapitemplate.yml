@@ -20,4 +20,6 @@
 
   - name: Print out success code
     debug:
-      var: ansibletowerapitemplate_output
+      msg:
+        - "Output message: {{ ansibletowerapitemplate_output.json }}"
+        - "Status Code: {{ ansibletowerapitemplate_output.status }}"
