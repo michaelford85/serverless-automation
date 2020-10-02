@@ -6,12 +6,13 @@
   gather_facts: no
   vars_files:
     - ./vars/lambda_vars.yml
+    - ./vars/lambda_vault.yml
 
   tasks:
- 
+
     - name: Get Current Time from Lambda
       ansible.builtin.uri:
-        url: "https://{{ url_prefix }}.execute-api.us-east-1.amazonaws.com/dev/ping"
+        url: "{{ devawsnodesimplehttpendpoint_url }}"
       register: time_output
 
     - name: Print out the current time
