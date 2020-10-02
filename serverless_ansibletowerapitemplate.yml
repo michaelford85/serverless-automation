@@ -2,7 +2,7 @@
 #Install Serverless: https://www.npmjs.com/package/serverless
 ---
 # - name: Serverless: Programmatically Call Ansible Tower
--  hosts: localhost
+- hosts: localhost
   gather_facts: no
   vars_files:
     - ./vars/lambda_vars.yml
