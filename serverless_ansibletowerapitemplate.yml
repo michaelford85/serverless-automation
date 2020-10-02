@@ -14,4 +14,4 @@
       ansible.builtin.uri:
         url: "{{ ansibletowerapitemplate_url }}"
         headers:
-          x-api-key: "{{ lambda_api_key }}"
+          x-api-key:"{{ lambda_api_key }}"
