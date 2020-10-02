@@ -1,8 +1,8 @@
 #https://www.serverless.com/examples/aws-node-simple-http-endpoint
 #Install Serverless: https://www.npmjs.com/package/serverless
 ---
-- name: Serverless: Programmatically Call Ansible Tower
-  hosts: localhost
+# - name: Serverless: Programmatically Call Ansible Tower
+-  hosts: localhost
   gather_facts: no
   vars_files:
     - ./vars/lambda_vars.yml
