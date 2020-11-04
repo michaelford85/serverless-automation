@@ -17,4 +17,4 @@
 
     - name: Print out the current time
       ansible.builtin.debug:
-        var: time_output.json.message
+        var: time_output.json.message 
