@@ -1,0 +1,22 @@
+#https://www.serverless.com/examples/aws-node-simple-http-endpoint
+#Install Serverless: https://www.npmjs.com/package/serverless
+---
+- name: Deploy Cloud Resources via Serverless function
+  hosts: localhost
+  gather_facts: no
+  vars_files:
+    - ./vars/lambda_vars.yml
+    - ./vars/lambda_vault.yml
+
+  tasks:
+
+    - name: Deploy Cloud Resources via Serverless function
+      ansible.builtin.uri:
+        url: "{{ ansible_tower_deploy_ec2_url }}&{{vpc_prefix}}"
+        headers:
+          x-api-key: "{{ lambda_manage_cloud_api_key }}"
+      register: the_output
+
+    - name: Print out the results
+      ansible.builtin.debug:
+        var: the_output.json.message

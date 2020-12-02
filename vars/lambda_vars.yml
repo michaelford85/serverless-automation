@@ -2,3 +2,5 @@
 lambda_api_key: "{{ vaulted_lambda_api_key }}"
 ansibletowerapitemplate_url: "{{ vaulted_ansibletowerapitemplate_url }}"
 devawsnodesimplehttpendpoint_url: "{{ vaulted_devawsnodesimplehttpendpoint_url }}"
+ansible_tower_deploy_ec2_url: "{{ vaulted_ansible_tower_deploy_ec2_url}}"
+lambda_manage_cloud_api_key: "{{ vaulted_lambda_manage_cloud_api_key }}"
