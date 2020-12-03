@@ -20,4 +20,4 @@
 
     - name: Print out the results
       ansible.builtin.debug:
-        var: the_output.json
+        var: the_output.json.body
