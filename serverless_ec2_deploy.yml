@@ -17,6 +17,7 @@
         headers:
           x-api-key: "{{ lambda_manage_cloud_api_key }}"
       register: the_output
+      no_log: true
 
     - name: Print out the results
       ansible.builtin.debug:
