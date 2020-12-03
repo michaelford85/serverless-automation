@@ -13,6 +13,7 @@
     - name: Deploy Cloud Resources via Serverless function
       ansible.builtin.uri:
         url: "{{ ansible_tower_deploy_ec2_url }}?vpc_name={{vpc_prefix}}"
+        method: POST
         headers:
           x-api-key: "{{ lambda_manage_cloud_api_key }}"
       register: the_output
