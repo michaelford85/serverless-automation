@@ -18,6 +18,7 @@
     no_log: true
     register: ansibletowerapitemplate_output
 
+
   - name: Print out success code
     debug:
       msg:
